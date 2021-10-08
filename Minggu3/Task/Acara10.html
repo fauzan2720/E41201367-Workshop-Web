@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acara 10</title>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+<body style="text-align: center;">
+    <h1>Belajar jQuery</h1>
+    <button id="dark_mode">Dark Mode</button>
+    <button id="light_mode">Light Mode</button>
+    <button id="tombol">Click Me!</button>
+
+    <script>
+        $(document).ready(function() {
+            $("#dark_mode").click(function() {
+                $("*").css("background-color","#333");
+                $("*").css( "color", "#fff");
+            });
+            
+            $("#light_mode").click(function() {
+                $("*").css("background-color","#fff");
+                $("*").css( "color", "#000");
+            });
+
+            $("#tombol").click(function() {
+                $(this).after('<p>Sedang Belajar jQuery di Duniailkom</p>');
+            });
+        });
+    </script>
+</body>
+</html>

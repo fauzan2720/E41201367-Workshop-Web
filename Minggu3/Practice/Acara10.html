@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acara 2</title>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+<body style="text-align: center;">
+    <h1>Belajar jQuery</h1>
+    <button id="tombol_hide">Sembunyikan</button>
+    <button id="tombol_show">Tampilkan</button>
+    <button id="tombol_small">Perkecil</button>
+    <button id="tombol_large">Perbesar</button>
+    <button id="tombol_red">Merahkan</button>
+    <button id="dark_mode">Dark Mode</button>
+    <button id="light_mode">Light Mode</button>
+    
+    <script>
+        $(document).ready(function() {
+            $("#tombol_hide").click(function() {
+                $("h1").hide();
+            });
+            
+            $("#tombol_show").click(function() {
+                $("h1").show();
+            });
+            
+            $("#tombol_small").click(function() {
+                $("h1").css("font-size","20px");
+            });
+            
+            $("#tombol_large").click(function() {
+                $("h1").css("font-size","40px");
+            });
+            
+            $("#tombol_red").click(function() {
+                $("h1").css( "color", "red");
+            });
+            
+            $("#dark_mode").click(function() {
+                $("*").css("background-color","#333");
+                $("*").css( "color", "#fff");
+            });
+            
+            $("#light_mode").click(function() {
+                $("*").css("background-color","#fff");
+                $("*").css( "color", "#000");
+            });
+        });
+    </script>
+</body>
+</html>
+ 

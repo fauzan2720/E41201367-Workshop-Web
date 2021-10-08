@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acara 12</title>
+</head>
+<body>
+    <form action="" onsubmit="return validasi_input(this)">
+        <p id="akses"></p>
+
+        <label for="username">Username: </label>
+        <input type="text" id="username" placeholder="Masukkan username.." autofocus>
+        <br>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Masukkan password.." minlength="5" maxlength="5">
+        <br>
+
+        <button action="submit" onclick="startlog()">Sign In</button>
+    </form>
+
+    <script type="text/javascript">
+        function validasi_input(form){
+            if (form.username.value == ""){
+                alert("Username masih kosong!");
+                form.username.focus();
+                return (false);
+            }
+            return (true);
+        }
+
+        function validasi_input(form){
+            var mincar = 5;
+            if (form.username.value.length < mincar){
+                alert("Panjang Username Minimal 5 Karater!");
+                form.username.focus();
+                return (false);
+            }
+            return (true);
+        }
+        
+        function startlog(){
+            var net1 = document.getElementById('username').value + document.getElementById('password').value;
+            var net2 = ('admin') + ('admin');
+            if (net1 == net2) {
+                alert('Anda Berhasil Login!');
+            } else {
+                var logakses = document.getElementById('akses').innerHTML = 'Email atau password salah';
+            }
+        };
+    </script>
+</body>
+</html>
