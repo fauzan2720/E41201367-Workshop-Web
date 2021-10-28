@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendataan Mahasiswa Polije</title>
+
+    <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="../bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .hover:hover { color: #000; text-decoration: underline #000; }
+        .w-label { width: 150px; }
+        .ml-160 { margin-left: 160px; }
+    </style>
+</head>
+<body>
+    <!-- awal navigasi -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning sticky-top shadow">
+        <div class="container-fluid container">
+            <a class="navbar-brand fw-bold" href="#">WORKSHOP WEB</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link hover" aria-current="page" href="Acara13.html">Acara 13</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link hover" aria-current="page" href="Acara14.html">Acara 14</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active hover" aria-current="page" href="#">Acara 15</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- akhir navigasi -->
+    
+    <main>
+        <div class="container mt-3">
+            <h1>Pendataan Mahasiswa Polije Jurusan Teknologi Informasi</h1>
+            <hr>
+            <div class="mt-3">
+                <div class="input-group">
+                    <label for="nim" class="input-group-text w-label">NIM</label>
+                    <input id="nim" type="text" class="form-control" placeholder="Nomor Induk Mahasiswa">
+                </div>
+            </div>
+            <div class="mt-3">
+                <div class="input-group">
+                    <label for="nama" class="input-group-text w-label">Nama Lengkap</label>
+                    <input id="nama" type="text" aria-label="First name" class="form-control" placeholder="Nama Depan">
+                    <input type="text" aria-label="Middle name" class="form-control" placeholder="Nama Tengah">
+                    <input type="text" aria-label="Last name" class="form-control" placeholder="Nama Belakang">
+                </div>
+            </div>
+            <div class="mt-3">
+                <div class="input-group">
+                    <label for="lk" class="input-group-text w-label">Jenis Kelamin</label>
+                    <div class="form-check form-check-inline mt-1 mx-3">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="lk" value="option1">
+                        <label class="form-check-label" for="lk">Laki-Laki</label>
+                    </div>
+                    <div class="form-check form-check-inline mt-1">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="pr" value="option2">
+                        <label class="form-check-label" for="pr">Perempuan</label>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-3">
+                <div class="input-group">
+                    <label for="prodi" class="input-group-text w-label">Prodi</label>
+                    <select id="prodi" class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                        <option selected disabled>Program Studi</option>
+                        <option value="1">D4 Teknik Informatika</option>
+                        <option value="2">D4 Teknik Komputer</option>
+                        <option value="3">D3 Manajemen Informatika</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mt-3">
+                <div class="input-group">
+                    <label for="email" class="input-group-text w-label">Email</label>
+                    <input id="email" type="email" class="form-control" placeholder="Email" aria-describedby="ExampleEmail">
+                </div>
+                <div id="ExampleEmail" class="form-text ml-160">
+                    Contoh: nim@student.polije.ac.id
+                </div>
+            </div>
+            <div class="mt-3">
+                <div class="input-group">
+                    <label for="alamat" class="input-group-text w-label">Alamat</label>
+                    <textarea class="form-control" placeholder="" id="alamat"></textarea>
+                </div>
+            </div>
+
+            <div class="mb-3 form-check mt-3">
+                <input type="checkbox" class="form-check-input" id="konfirm">
+                <label class="form-check-label" for="konfirm">Data diatas merupakan data yang sebenarnya</label>
+            </div>
+            <button type="button" class="btn btn-warning">Kirim</button>
+        </div>
+    </main>
+</body>
+</html>
